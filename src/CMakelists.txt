@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.6)
+
+project(ds_test)
+
+add_executable(ds_test quick_sort.cpp)
