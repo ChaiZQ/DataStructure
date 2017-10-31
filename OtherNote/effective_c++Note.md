@@ -18,14 +18,17 @@
 
 - 注意以下差异，区别仅在于 const在*的左边还是右边
 
-```c++
-char greeting[]="hello";
-char* p=greeting;
-const char* p =greeting;
-char* const p = greeting;
-char const* p = greeting;
-const char* const p = greeting;
-```
+  ```c
+  char greeting[]="hello";
+  char* p=greeting;
+  const char* p =greeting;
+  char* const p = greeting;
+  char const* p = greeting;
+  const char* const p = greeting;
+  ```
+
+  ​
+
 
 - 注意以下差别
 
@@ -36,7 +39,9 @@ const char* const p = greeting;
   std::vector<int>::const_iterator cIter = vec.begin();
   ```
 
-  ​
 
+### 3. 编译器会自动为类创建的函数 
 
+- default构造，copy构造，copy assignment 操作符以及析构函数。
+- 当类成员中出现了引用时，编译器将拒绝编译copy构造，copy assignment等语句。
 
