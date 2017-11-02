@@ -20,4 +20,7 @@
 
   > AdaBoost是通过提升错分数据点的权重来定位模型的不足而Gradient Boosting是通过算梯度（gradient）来定位模型的不足
 
-- ​
+
+### 2017-11-2
+
+- logistic regresstion 公式推导！！尤其是costfunction的gradient，求gradient后形式很简单！以及python 实现​
