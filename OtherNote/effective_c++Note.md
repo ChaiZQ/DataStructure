@@ -42,8 +42,10 @@
 
 ### 3. 编译器会自动为类创建的函数 
 
-- default构造，copy构造，copy assignment 操作符以及析构函数。
-- 当类成员中出现了引用时，编译器将拒绝编译copy构造，copy assignment等语句。
+- default构造，copy构造，copy assignment 操作符以及析构函数。4种。
+- 唯有以上四种函数被需要（被调用）时，才会被编译器生成出来。
+- 当类成员中出现了**引用**时，编译器将拒绝编译copy构造，copy assignment等语句。
+- 当类成员中出现了**const**变量时，编译器也拒绝编译copy构造，copy assignment等语句，因为，不知道如何给__const__变量赋值。
 
 
 ### 4.  声明析构函数为虚函数
@@ -55,3 +57,8 @@
 
 ### 6. assignment操作符返回一个reference to *this
 
+### 7. std::auto_ptr
+
+- copy assignment或者copy 构造之后，原有的ptr被置为NULL，新的ptr成为对象的唯一占有者。
+- 与之对比，std::tr1::shared_ptr
+- ​
