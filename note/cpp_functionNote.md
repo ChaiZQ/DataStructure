@@ -56,8 +56,8 @@ const_iterator find(const key_type& k) const;
 count(k) 成员函数返回与给定键关联的值得数量。下面的例子报告了有多少个与键 “213.108.96.7” 关联的值：
 
 ```
-cout<<dns.count("213.108.96.7") //output: 2
-            <<" elements associated"<<endl;
+cout<<dns.count("213.108.96.7") 
+            <<" elements associated"<<endl;//output: 2
 ```
 
 为了存取 multimap 中的多个值，使用 equal_range()、lower_bound()和 upper_bound()成员函数：
@@ -96,3 +96,17 @@ cout<<cit->second<<endl;
 ++cit;
 }
 ```
+
+### stl 中string的find用法
+原型
+```
+//string (1)
+size_type find (const basic_string& str, size_type pos = 0) const noexcept;
+//c-string (2)
+size_type find (const charT* s, size_type pos = 0) const;
+//buffer (3)
+size_type find (const charT* s, size_type pos, size_type n) const;
+//character (4)
+size_type find (charT c, size_type pos = 0) const noexcept;
+```
+失败返回-1 （npos）
