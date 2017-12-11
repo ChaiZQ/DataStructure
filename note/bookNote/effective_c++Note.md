@@ -62,3 +62,20 @@
 - copy assignment或者copy 构造之后，原有的ptr被置为NULL，新的ptr成为对象的唯一占有者。
 - 与之对比，std::tr1::shared_ptr
 - ​
+
+## C-5
+
+### 1. 转型
+
+四种新式转型
+
+```c++
+const_cast<T>
+dynamic_cast<T>
+reinterpret_cast<T>
+static_cast<T>
+```
+
+![pic1](D:\Documents\GitHub\DataStructure\note\bookNote\pic1.png)
+
+- 单一对象可能拥有一个以上的地址，例如以base\*指向它时的地址和以Derived\*指向它时的地址（C, Java，C#)不可能发生这种事，但c++可能。
