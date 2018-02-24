@@ -44,3 +44,17 @@ cv::Mat image = cv::Mat(400, 600, CV_8UC3); //宽400，长600，３通道彩色�
     cv::Vec3b * data001 = image.ptr<cv::Vec3b>(0)[1];
     cv::Vec3b * data
 ```
+
+## opencv 子矩阵操作
+
+矩阵A的子矩阵都赋值为1个常数2
+```
+A(Range(row, row + n), Range(col, col + m)) = 2;
+```
+
+将矩阵A赋值给矩阵B的1个子矩阵
+```
+A.copyTo(B(Range(row, row + n), Range(col, col + m)));
+```
+
+
