@@ -121,7 +121,7 @@ void SearchPath(VertexType vex[], PathMatrix *prev,int v, int u)
 
 #### 思想
 
-从任意点A到任意点B的最短路径就两种可能，一是直径从A到B，2是从A经过若干个节点到B。假设dist(A,B)表示A到B的最短路径，则对每一个节点K，都应该有dist(A,K)+dist(K,B)<=dist(A,B)。
+从任意点A到任意点B的最短路径就两种可能，一是直径从A到B，2是从A经过若干个节点到B。假设dist(A,B)表示A到B的最短路径，则对每一个节点K，都应该有dist(A,K)+dist(K,B)>=dist(A,B)。
 
 所以代码非常简洁，只需要注意一点，外循环是k，用来检查的节点！
 
