@@ -38,7 +38,35 @@
 
 - 学习了RNN 模型。RNN循环神经网络，处理序列式的输入，实现信息的反复使用，（效果并不太好，所有的成果几乎都是RNN的变种LSTM，long short term），LSTM的变体GRU（gated recurrent unit) 将忘记门和输入门合成一个单一的更新门。
 
-  http://blog.csdn.net/prom1201/article/details/52221822
+  http://blog.csdn.net/prom1201/article/details/52221822 
 
   ​
+
+
+### 2018-3-9
+
+- 一大类动态规划问题，任意面值无限使用时目标值的最小张数，有限使用时的最小张数，无限使用时目标的方法总数。
+
+- 根据邻接矩阵建立有向图（多叉树）
+
+- 最近公共祖先的编程思路，建立一个map，标记路径a上所有的点，然后在路径b上依次检查是否被标记过。若是简单的int型，可以直接使用vector代替map。
+
+- 统计一个数二进制中1的个数的方法！
+
+  ```c
+  int cnt=0;
+  while(dif!=0){
+      dif=dif&(dif-1);
+      cnt++;
+  }             //统计一个整数dif含有多少个1；
+
+  ```
+
+### 2018-3-11
+
+- leetcode 376 wiggle subsequence
+
+- 透彻理解二分搜索，掌握各种细节 http://www.cnblogs.com/luoxn28/p/5767571.html
+
+  https://www.cnblogs.com/bofengyu/p/6761389.html
 

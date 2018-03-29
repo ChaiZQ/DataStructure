@@ -150,3 +150,24 @@ for (int k=0; k<n; ++k)
 
 迷宫算法可以使用Dij算法，但一般的迷宫问题都类似于"无权图"问题，因此算法流程可以更简洁。与任意节点相邻的节点最多只有四个。这样连遍历的过程都省略了。迷宫算法也能用BFS算法模拟，使用堆栈记录路径。
 
+
+
+
+
+### DFS
+
+````c++
+bool search(int idx){
+    //valid check
+    if(idx invalid)
+        return false;
+    if(found)
+        return true;
+    else
+        visit[idx]=true;
+    	search(idx+1);
+}
+````
+
+
+
