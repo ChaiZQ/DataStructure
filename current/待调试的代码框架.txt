@@ -1,0 +1,23 @@
+2018-1-17 mechaZYK/object-detector python  (hog+svm, gray-scale image)
+
+想法，通过一个reference点及其周围的ppf信息，判断该点是object点的概率(很难）
+
+简单看一些博硕士论文
+
+2018-2-5 最终思路
+1. 重点放在训练的过程，多视点，仅采集可见点，并记录每个可见点的概率，这个作为投票的系数。好处是，计算的ppf一定是可见点 ppf，举例子，三通管，内外壁的混淆。
+2. smart sampling 场景点的。若某个点不是物体上的点，那么它周围的点很有可能也不是，反之，就可能是的。通过这个控制采样的密度。
+
+
+2018-2-19
+花时间复习 http://blog.csdn.net/wishchin/article/details/73229010?locationNum=16&fps=1
+
+2018-2-23
+使用mls训练的pipe在match时崩溃，解决
+
+2018-3-6
+看完了https://www.cnblogs.com/Y1Focus/p/6707121.html，需要反复多次的浏览增强记忆
+看完了http://blog.csdn.net/charles_r_chiu/article/details/47858885，需反复多次浏览
+
+了解一下这个框架
+https://github.com/paroj/ObjRecPoseEst
